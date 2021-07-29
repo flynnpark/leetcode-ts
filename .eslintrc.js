@@ -32,6 +32,11 @@ module.exports = {
       },
     ],
     'simple-import-sort/exports': 'error',
+    quotes: [
+      'error',
+      'single',
+      { avoidEscape: true, allowTemplateLiterals: false },
+    ],
   },
   env: {
     'jest/globals': true,
