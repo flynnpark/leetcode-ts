@@ -26,3 +26,7 @@ You can return the answer in any order.
 - -10<sup>9</sup> <= nums[i] <= 10<sup>9</sup>
 - -10<sup>9</sup> <= target <= 10<sup>9</sup>
 - **Only one valid answer exists.**
+
+## 해결 방법
+
+`Map` 자료구조를 사용하여 주어진 `target - num` 결과가 있는지 조회하고, 없으면 `num`의 위치를 `hash`에 넣는다. 만약 순회하다가 `target - num` 결과가 있을 경우엔 `result`를 만들어 반환한다.
