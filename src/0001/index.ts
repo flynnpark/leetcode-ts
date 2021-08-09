@@ -1,4 +1,4 @@
-export function twoSum(nums: number[], target: number): number[] {
+function twoSum(nums: number[], target: number): number[] {
   const hash: Map<number, number> = new Map();
   let result: number[] = [];
   for (let i = 0; i < nums.length; i++) {
@@ -12,3 +12,5 @@ export function twoSum(nums: number[], target: number): number[] {
   }
   return result;
 }
+
+export { twoSum };
