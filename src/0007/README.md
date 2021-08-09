@@ -27,3 +27,7 @@ Given a signed 32-bit integer `x`, return `x` _with its digits reversed_. If rev
 #### **Constraints:**
 
 - -2<sup>31</sup> <= x <= 2<sup>31</sup> - 1
+
+## 해결 방법
+
+별로 설명할 게 없다. 음수일 경우만 따로 처리해주는 걸 제외하면 `number` 타입을 `string` 타입으로 만들고, `split`을 사용하여 배열로 만든 후, 만들어진 배열을 `reverse`를 사용하여 뒤집어서 다시 `number`로 만드는 과정을 거치면 된다.
