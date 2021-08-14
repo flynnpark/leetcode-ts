@@ -1,4 +1,4 @@
-import { isPalindrome } from '.';
+import { isPalindrome, isPalindromeWithStringComparing } from '.';
 
 test('0009. Palindrome Number', () => {
   interface TestCase {
@@ -15,5 +15,9 @@ test('0009. Palindrome Number', () => {
 
   testCases.forEach(({ input, output }) => {
     expect(isPalindrome(input)).toBe(output);
+  });
+
+  testCases.forEach(({ input, output }) => {
+    expect(isPalindromeWithStringComparing(input)).toBe(output);
   });
 });
