@@ -14,7 +14,7 @@ Notice that the solution set must not contain duplicate triplets.
 <pre><code><strong>Input:</strong> nums = []
 <strong>Output:</strong> []</code></pre>
 
-#### **Example 2:**
+#### **Example 3:**
 
 <pre><code><strong>Input:</strong> nums = [0]
 <strong>Output:</strong> []</code></pre>
