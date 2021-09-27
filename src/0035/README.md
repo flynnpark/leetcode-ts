@@ -35,3 +35,7 @@ You must write an algorithm with `O(log n)` runtime complexity.
 - `-10<sup>4</sup> <= nums[i] <= 10<sup>4</sup>`
 - `nums` contains **distinct** values sorted in **ascending** order.
 - `-10<sup>4</sup> <= target <= 10<sup>4</sup>`
+
+## 해결 방법
+
+정렬된 숫자 배열 `nums`에서 숫자 `target`이 들어갈 위치를 반환하는 문제이다. `nums`가 정렬되어 있고, 알고리즘을 `O(log n)`으로 작성하라고 하였기 때문에 이진 탐색을 사용하여 간단하게 해결하였다.
