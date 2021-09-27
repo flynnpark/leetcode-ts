@@ -1,6 +1,6 @@
 import { searchInsert } from '.';
 
-test('0035. Search Insert Position', () => {
+describe('0035. Search Insert Position', () => {
   interface TestCase {
     input: {
       nums: number[];
@@ -47,7 +47,7 @@ test('0035. Search Insert Position', () => {
     },
   ];
 
-  testCases.forEach(({ input, output }) => {
-    expect(searchInsert(input.nums, input.target)).toEqual(output);
+  test.each(testCases)('%o', ({ input, output }) => {
+    expect(searchInsert(input.nums, input.target)).toBe(output);
   });
 });
