@@ -8,7 +8,10 @@ class ListNode {
   }
 }
 
-function transformListToListNode(list: number[]): ListNode {
+function transformListToListNode(list: number[]): ListNode | null {
+  if (!list.length) {
+    return null;
+  }
   const head = new ListNode(list[0]);
   let current = head;
   for (let i = 1; i < list.length; i++) {

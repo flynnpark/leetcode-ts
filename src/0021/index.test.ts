@@ -1,4 +1,4 @@
-import { transformListNodeToList, transformListToListNode } from 'utils';
+import { transformListNodeToList, transformListToListNode } from '../utils';
 import { mergeTwoLists } from '.';
 
 describe('0021. Merge Two Sorted Lists', () => {
