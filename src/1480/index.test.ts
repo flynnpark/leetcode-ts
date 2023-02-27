@@ -1,6 +1,6 @@
 import { runningSum } from '.';
 
-describe('0027. Remove Element', () => {
+describe('1480. Running Sum of 1d Array', () => {
   interface TestCase {
     input: {
       nums: number[];

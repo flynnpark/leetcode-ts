@@ -1,6 +1,6 @@
 import { longestPalindrome } from '.';
 
-test('0015. Longest Palindromic Substring', () => {
+test('0005. Longest Palindromic Substring', () => {
   interface TestCase {
     input: string;
     output: string;

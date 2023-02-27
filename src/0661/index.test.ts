@@ -1,6 +1,6 @@
 import { imageSmoother } from '.';
 
-describe('0027. Remove Element', () => {
+describe('0661. Image Smoother', () => {
   interface TestCase {
     input: {
       img: number[][];
