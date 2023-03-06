@@ -31,6 +31,13 @@ describe('0205. Isomorphic Strings', () => {
       },
       output: true,
     },
+    {
+      input: {
+        s: 'abcdefghijklmnopqrstuvwxyzva',
+        t: 'abcdefghijklmnopqrstuvwxyzck',
+      },
+      output: false,
+    },
   ];
 
   test.each(testCases)('%o', ({ input, output }) => {
