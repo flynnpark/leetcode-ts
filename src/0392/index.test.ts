@@ -27,6 +27,6 @@ describe('0392. Is Subsequence', () => {
   ];
 
   test.each(testCases)('%o', ({ input, output }) => {
-    expect(isSubsequence(input.t, input.s)).toBe(output);
+    expect(isSubsequence(input.s, input.t)).toBe(output);
   });
 });
