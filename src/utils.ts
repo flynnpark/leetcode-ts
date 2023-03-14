@@ -34,4 +34,13 @@ function transformListNodeToList(head: ListNode | null): number[] {
   return list;
 }
 
-export { ListNode, transformListToListNode, transformListNodeToList };
+function getValueFromListNode(node: ListNode | null) {
+  return node ? node.val : null;
+}
+
+export {
+  getValueFromListNode,
+  ListNode,
+  transformListNodeToList,
+  transformListToListNode,
+};
