@@ -38,9 +38,35 @@ function getValueFromListNode(node: ListNode | null) {
   return node ? node.val : null;
 }
 
+function modifyListNodeWithCircular(
+  head: ListNode | null,
+  pos: number,
+): ListNode | null {
+  if (head === null || pos < 0) {
+    return head;
+  }
+
+  let currPos = 0;
+  let currNode: ListNode = head;
+
+  while (currPos !== pos && currNode.next) {
+    currNode = currNode.next;
+    currPos++;
+  }
+
+  let lastNode: ListNode = head;
+  while (lastNode.next) {
+    lastNode = lastNode.next;
+  }
+
+  lastNode.next = currNode;
+
+  return head;
+}
 export {
   getValueFromListNode,
   ListNode,
+  modifyListNodeWithCircular,
   transformListNodeToList,
   transformListToListNode,
 };

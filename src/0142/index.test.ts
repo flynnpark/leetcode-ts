@@ -1,4 +1,8 @@
-import { getValueFromListNode, transformListToListNode } from '../utils';
+import {
+  getValueFromListNode,
+  modifyListNodeWithCircular,
+  transformListToListNode,
+} from '../utils';
 import { detectCycle } from '.';
 
 test('0142. Linked List Cycle II', () => {
@@ -31,8 +35,11 @@ test('0142. Linked List Cycle II', () => {
     },
   ];
 
-  testCases.forEach(({ input: { head }, output }) => {
-    const transformedHead = transformListToListNode(head);
+  testCases.forEach(({ input: { head, pos }, output }) => {
+    const transformedHead = modifyListNodeWithCircular(
+      transformListToListNode(head),
+      pos,
+    );
     const result = detectCycle(transformedHead);
     expect(getValueFromListNode(result)).toEqual(
       output !== null ? head[output] : null,
