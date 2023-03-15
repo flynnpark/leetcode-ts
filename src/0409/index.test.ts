@@ -1,6 +1,6 @@
 import { longestPalindrome } from '.';
 
-test('409. Longest Palindrome', () => {
+test('0409. Longest Palindrome', () => {
   interface TestCase {
     input: { s: string };
     output: number;
@@ -22,7 +22,7 @@ test('409. Longest Palindrome', () => {
   ];
 
   testCases.forEach(({ input, output }) => {
-    const result = longestPalindrome(input.prices);
+    const result = longestPalindrome(input.s);
     expect(result).toEqual(output);
   });
 });
