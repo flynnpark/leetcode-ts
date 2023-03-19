@@ -63,10 +63,43 @@ function modifyListNodeWithCircular(
 
   return head;
 }
+
+class Node {
+  val: number;
+  children: Node[];
+  constructor(val?: number) {
+    this.val = val === undefined ? 0 : val;
+    this.children = [];
+  }
+}
+
+function transformListToNode(items: (number | null)[]): Node | null {
+  const nodeArray = items.map((num) => (num ? new Node(num) : null));
+  const root = nodeArray.shift();
+  if (!root) {
+    return null;
+  }
+  const stack = [root];
+  while (nodeArray.length > 0) {
+    const parent = stack.shift();
+    while (nodeArray[0] !== null && parent) {
+      const child = nodeArray.shift();
+      if (child) {
+        parent.children.push(child);
+        stack.push(child);
+      }
+    }
+    nodeArray.shift();
+  }
+  return root;
+}
+
 export {
   getValueFromListNode,
   ListNode,
   modifyListNodeWithCircular,
+  Node,
   transformListNodeToList,
   transformListToListNode,
+  transformListToNode,
 };
