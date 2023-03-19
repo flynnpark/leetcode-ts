@@ -74,22 +74,29 @@ class Node {
 }
 
 function transformListToNode(items: (number | null)[]): Node | null {
-  const nodeArray = items.map((num) => (num ? new Node(num) : null));
-  const root = nodeArray.shift();
-  if (!root) {
-    return null;
-  }
-  const stack = [root];
-  while (nodeArray.length > 0) {
-    const parent = stack.shift();
-    while (nodeArray[0] !== null && parent) {
-      const child = nodeArray.shift();
-      if (child) {
-        parent.children.push(child);
-        stack.push(child);
+  if (items.length === 0) return null;
+  const rootValue = items[0];
+  if (rootValue === null) return null;
+
+  const root = new Node(rootValue);
+  let stack = [root];
+
+  let i = 1;
+  let parent = root;
+  while (i < items.length) {
+    if (items[i] === null) {
+      const [newParent, ...newStack] = stack;
+      parent = newParent;
+      stack = newStack;
+    } else {
+      const newItemValue = items[i];
+      if (newItemValue !== null) {
+        const newNode = new Node(newItemValue);
+        parent.children.push(newNode);
+        stack.push(newNode);
       }
     }
-    nodeArray.shift();
+    i++;
   }
   return root;
 }
