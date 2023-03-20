@@ -101,6 +101,47 @@ function transformListToNode(items: (number | null)[]): Node | null {
   return root;
 }
 
+class TreeNode {
+  val: number;
+  left: TreeNode | null;
+  right: TreeNode | null;
+  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
+  }
+}
+
+function transformListToTreeNode(items: (number | null)[]): TreeNode | null {
+  if (items.length === 0 || items[0] === null || items[0] === undefined) {
+    return null;
+  }
+
+  const root = new TreeNode(items[0]);
+  const queue: (TreeNode | null)[] = [root];
+  let i = 1;
+
+  while (i < items.length) {
+    const parent = queue.shift();
+    if (parent) {
+      const leftValue = items[i++];
+      const rightValue = items[i++];
+      if (leftValue !== undefined) {
+        const left = leftValue ? new TreeNode(leftValue) : null;
+        parent.left = left;
+        queue.push(left);
+      }
+      if (rightValue !== undefined) {
+        const right = rightValue ? new TreeNode(rightValue) : null;
+        parent.right = right;
+        queue.push(right);
+      }
+    }
+  }
+
+  return root;
+}
+
 export {
   getValueFromListNode,
   ListNode,
@@ -109,4 +150,6 @@ export {
   transformListNodeToList,
   transformListToListNode,
   transformListToNode,
+  transformListToTreeNode,
+  TreeNode,
 };
