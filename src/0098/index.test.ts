@@ -20,6 +20,12 @@ test('0098. Validate Binary Search Tree', () => {
       },
       output: false,
     },
+    {
+      input: {
+        root: [2, 2, 2],
+      },
+      output: false,
+    },
   ];
 
   testCases.forEach(({ input: { root }, output }) => {
