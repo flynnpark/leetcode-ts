@@ -42,8 +42,11 @@ describe('0235. Lowest Common Ancestor of a Binary Search Tree', () => {
     const transformedRoot = transformListToTreeNode(root);
     const transformedP = new TreeNode(p);
     const transformedQ = new TreeNode(q);
-    expect(
-      lowestCommonAncestor(transformedRoot, transformedP, transformedQ),
-    ).toEqual(output);
+    const result = lowestCommonAncestor(
+      transformedRoot,
+      transformedP,
+      transformedQ,
+    );
+    expect(result ? result.val : null).toStrictEqual(output);
   });
 });
