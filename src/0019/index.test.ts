@@ -39,6 +39,6 @@ describe('0019. Remove Nth Node From End of List', () => {
     const transformedResult = transformListNodeToList(
       removeNthFromEnd(transformedHead, input.n),
     );
-    expect(transformedResult).toBe(output);
+    expect(transformedResult).toStrictEqual(output);
   });
 });
