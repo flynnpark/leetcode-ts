@@ -25,6 +25,6 @@ describe('0283. Move Zeroes', () => {
 
   test.each(testCases)('%o', ({ input: { nums }, output }) => {
     moveZeroes(nums);
-    expect(nums).toBe(output);
+    expect(nums).toEqual(output);
   });
 });
