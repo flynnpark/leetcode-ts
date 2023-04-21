@@ -24,7 +24,6 @@ describe('0557. Reverse Words in a String III', () => {
   ];
 
   test.each(testCases)('%o', ({ input: { s }, output }) => {
-    reverseWords(s);
-    expect(s).toEqual(output);
+    expect(reverseWords(s)).toBe(output);
   });
 });
