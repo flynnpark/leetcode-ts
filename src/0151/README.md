@@ -1,4 +1,4 @@
-# 0151. [Reverse Words in a String]()
+# 0151. [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/?envType=study-plan-v2&id=leetcode-75)
 
 Given an input string `s`, reverse the order of the **words**.
 
