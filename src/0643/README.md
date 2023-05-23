@@ -19,7 +19,7 @@ Find a contiguous subarray whose **length is equal to** `k` that has the maximum
 <strong>Output:</strong> 5.00000
 </pre>
 
-### **Constraints:\***
+### **Constraints:**
 
 - `n == nums.length`
 - <code>1 <= k <= n <= 10<sup>5</sup></code>
