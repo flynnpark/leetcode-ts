@@ -31,6 +31,13 @@ describe('1456. Maximum Number of Vowels in a Substring of Given Length', () => 
       },
       output: 2,
     },
+    {
+      input: {
+        s: 'weallloveyou',
+        k: 7,
+      },
+      output: 4,
+    },
   ];
 
   test.each(testCases)('%o', ({ input: { s, k }, output }) => {
