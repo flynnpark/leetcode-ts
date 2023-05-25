@@ -1,6 +1,6 @@
 import { longestSubarray } from '.';
 
-test("1493. Longest Subarray of 1's After Deleting One Element", () => {
+describe("1493. Longest Subarray of 1's After Deleting One Element", () => {
   interface TestCase {
     input: {
       nums: number[];
@@ -29,7 +29,7 @@ test("1493. Longest Subarray of 1's After Deleting One Element", () => {
     },
   ];
 
-  testCases.forEach(({ input: { nums }, output }) => {
+  test.each(testCases)('Case %#', ({ input: { nums }, output }) => {
     expect(longestSubarray(nums)).toEqual(output);
   });
 });

@@ -17,8 +17,8 @@ Return _the size of the longest non-empty subarray containing only_ `1`_'s in th
 <pre>
 <strong>Input:</strong> nums = [0,1,1,1,0,1,1,0,1]
 <strong>Output:</strong> 5
-<strong>Explanation:</strong> After deleting the number in position 4, [0,1,1,1,1,1,0,1] longest subarray with value of 
-</pre>1's is [1,1,1,1,1].
+<strong>Explanation:</strong> After deleting the number in position 4, [0,1,1,1,1,1,0,1] longest subarray with value of 1's is [1,1,1,1,1].
+</pre>
 
 ### **Example 3:**
 
