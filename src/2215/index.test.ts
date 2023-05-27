@@ -30,6 +30,6 @@ describe('2215. Find the Difference of Two Arrays', () => {
   ];
 
   test.each(testCases)('%o', ({ input: { nums1, nums2 }, output }) => {
-    expect(findDifference(nums1, nums2)).toBe(output);
+    expect(findDifference(nums1, nums2)).toStrictEqual(output);
   });
 });
