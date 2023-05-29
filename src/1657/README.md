@@ -3,9 +3,9 @@
 Two strings are considered **close** if you can attain one from the other using the following operations:
 
 - Operation 1: Swap any two existing characters.
-  - For example, `a_b_cd_e_ -> a_e_cd_b_`
+  - For example, <code>a<u>b</u>cd<u>e</u> -> a<u>e</u>cd<u>b</u></code>
 - Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character.
-  - For example, `_aa_c_abb_ -> _bb_c_baa_` (all `a`'s turn into `b`'s, and all `b`'s turn into `a`'s)
+  - For example, <code><u>aa</u>c<u>abb</u> -> <u>bb</u>c<u>baa</u></code> (all `a`'s turn into `b`'s, and all `b`'s turn into `a`'s)
 
 You can use the operations on either string as many times as necessary.
 
@@ -17,8 +17,8 @@ Given two strings, `word1` and `word2`, return `true` _if_ `word1` _and_ `word2`
 <strong>Input:</strong> word1 = "abc", word2 = "bca"
 <strong>Output:</strong> true
 <strong>Explanation:</strong> You can attain word2 from word1 in 2 operations.
-Apply Operation 1: "abc" -> "acb"
-Apply Operation 1: "acb" -> "bca"
+Apply Operation 1: "a<u>bc</u>" -> "a<u>cb</u>"
+Apply Operation 1: "<u>a</u>c<u>b</u>" -> "<u>b</u>c<u>a</u>"
 </pre>
 
 ### **Example 2:**
@@ -35,9 +35,9 @@ Apply Operation 1: "acb" -> "bca"
 <strong>Input:</strong> word1 = "cabbba", word2 = "abbccc"
 <strong>Output:</strong> true
 <strong>Explanation:</strong> You can attain word2 from word1 in 3 operations.
-Apply Operation 1: "cabbba" -> "caabbb"
-Apply Operation 2: "caabbb" -> "baaccc"
-Apply Operation 2: "baaccc" -> "abbccc"
+Apply Operation 1: "ca<u>b</u>bb<u>a</u>" -> "ca<u>a</u>bb<u>b</u>"
+Apply Operation 2: "<u>c</u>aa<u>bbb</u>" -> "<u>b</u>aa<u>ccc</u>"
+Apply Operation 2: "<u>baa</u>ccc" -> "<u>abb</u>ccc"
 </pre>
 
 ### **Constraints:**
