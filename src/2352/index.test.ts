@@ -30,6 +30,15 @@ describe('2352. Equal Row and Column Pairs', () => {
       },
       output: 3,
     },
+    {
+      input: {
+        grid: [
+          [11, 1],
+          [1, 11],
+        ],
+      },
+      output: 2,
+    },
   ];
 
   test.each(testCases)('%o', ({ input: { grid }, output }) => {
