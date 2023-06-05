@@ -27,6 +27,12 @@ describe('0735. Asteroid Collision', () => {
       },
       output: [10],
     },
+    {
+      input: {
+        asteroids: [-2, -2, 1, -2],
+      },
+      output: [-2, -2, -2],
+    },
   ];
 
   test.each(testCases)('%o', ({ input: { asteroids }, output }) => {
