@@ -1,6 +1,6 @@
 import { searchMatrix } from '.';
 
-test('0074. Search a 2D Matrix', () => {
+describe('0074. Search a 2D Matrix', () => {
   interface TestCase {
     input: {
       matrix: number[][];
