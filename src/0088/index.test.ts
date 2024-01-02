@@ -40,7 +40,7 @@ describe('0088. Merge Sorted Array', () => {
     'Case %#',
     ({ input: { nums1, m, nums2, n }, output }) => {
       merge(nums1, m, nums2, n);
-      expect(nums1).toEqual(output);
+      expect(nums1).toStrictEqual(output);
     },
   );
 });
