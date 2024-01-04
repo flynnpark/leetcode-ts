@@ -20,7 +20,7 @@ function predictPartyVictory(senate: string): string {
       dQueue.push(d + length);
     }
   }
-  console.log(rQueue, dQueue);
+
   return rQueue.length ? 'Radiant' : 'Dire';
 }
 
