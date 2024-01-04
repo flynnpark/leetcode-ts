@@ -2,7 +2,7 @@ import { majorityElement } from '.';
 
 describe('0169. Majority Element', () => {
   interface TestCase {
-    input: { nums };
+    input: { nums: number[] };
     output: number;
   }
 
