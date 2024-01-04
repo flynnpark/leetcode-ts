@@ -1,4 +1,4 @@
-import { merge } from '.';
+import { removeDuplicates } from '.';
 
 describe('80. Remove Duplicates from Sorted Array II', () => {
   interface TestCase {
@@ -33,7 +33,7 @@ describe('80. Remove Duplicates from Sorted Array II', () => {
   test.each(testCases)(
     'Case %#',
     ({ input: { nums }, output: { n, expected } }) => {
-      const result = merge(nums);
+      const result = removeDuplicates(nums);
       expect(result).toBe(n);
       for (let i = 0; i < result; i++) {
         expect(nums[i]).toBe(expected[i]);
