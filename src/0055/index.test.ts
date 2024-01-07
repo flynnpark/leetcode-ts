@@ -21,8 +21,8 @@ describe('0055. Jump Game', () => {
     },
   ];
 
-  test.each(testCases)('Case %#', ({ input: { prices }, output }) => {
-    const result = canJump(prices);
+  test.each(testCases)('Case %#', ({ input: { nums }, output }) => {
+    const result = canJump(nums);
     expect(result).toBe(output);
   });
 });
