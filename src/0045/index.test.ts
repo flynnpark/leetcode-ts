@@ -19,10 +19,16 @@ describe('0045. Jump Game II', () => {
       },
       output: 2,
     },
+    {
+      input: {
+        nums: [1, 1, 1, 1, 1],
+      },
+      output: 4,
+    },
   ];
 
   test.each(testCases)('Case %#', ({ input: { nums }, output }) => {
-    const relsult = jump(nums);
+    const result = jump(nums);
     expect(result).toStrictEqual(output);
   });
 });
