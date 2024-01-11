@@ -23,6 +23,6 @@ describe('0274. H-Index', () => {
 
   test.each(testCases)('Case %#', ({ input: { citations }, output }) => {
     const result = hIndex(citations);
-    expect(result).toStrictEqual(output);
+    expect(result).toBe(output);
   });
 });
