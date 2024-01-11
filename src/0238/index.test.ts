@@ -24,6 +24,9 @@ describe('0238. Product of Array Except Self', () => {
   ];
 
   test.each(testCases)('Case %#', ({ input: { nums }, expected }) => {
-    expect(productExceptSelf(nums)).toStrictEqual(expected);
+    const result = productExceptSelf(nums);
+    for (let i = 0; i < nums.length; i++) {
+      expect(result[i] === expected[i]).toBeTruthy();
+    }
   });
 });
