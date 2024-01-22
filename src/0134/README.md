@@ -1,6 +1,6 @@
 # 0134. [Gas Station](https://leetcode.com/problems/gas-station/description/?envType=study-plan-v2&envId=top-interview-150)
 
-There are n gas stations along a circular route, where the amount of gas at the <code>i<sup>th</sup></code> station is `gas[i]`.
+There are `n` gas stations along a circular route, where the amount of gas at the <code>i<sup>th</sup></code> station is `gas[i]`.
 
 You have a car with an unlimited gas tank and it costs `cost[i]` of gas to travel from the <code>i<sup>th</sup></code> station to its next <code>(i + 1)<sup>th</sup></code> station. You begin the journey with an empty tank at one of the gas stations.
 

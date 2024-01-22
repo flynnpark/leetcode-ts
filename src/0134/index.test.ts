@@ -24,6 +24,13 @@ describe('0134. Gas Station', () => {
       },
       expected: -1,
     },
+    {
+      input: {
+        gas: [5, 1, 2, 3, 4],
+        cost: [4, 4, 1, 5, 1],
+      },
+      expected: 4,
+    },
   ];
 
   test.each(testCases)('Case %#', ({ input: { gas, cost }, expected }) => {
