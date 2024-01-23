@@ -21,6 +21,12 @@ describe('0135. Candy', () => {
       },
       expected: 4,
     },
+    {
+      input: {
+        ratings: [1, 3, 4, 5, 2],
+      },
+      expected: 11,
+    },
   ];
 
   test.each(testCases)('Case %#', ({ input: { ratings }, expected }) => {
