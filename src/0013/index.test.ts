@@ -1,6 +1,6 @@
 import { romanToInt, romanToIntSingleLine } from '.';
 
-test('0013. Roman to Integer', () => {
+describe('0013. Roman to Integer', () => {
   interface TestCase {
     input: string;
     output: number;
@@ -29,11 +29,11 @@ test('0013. Roman to Integer', () => {
     },
   ];
 
-  testCases.forEach(({ input, output }) => {
+  test.each(testCases)('Case %#', ({ input, output }) => {
     expect(romanToInt(input)).toBe(output);
   });
 
-  testCases.forEach(({ input, output }) => {
+  test.each(testCases)('Case %#', ({ input, output }) => {
     expect(romanToIntSingleLine(input)).toBe(output);
   });
 });
