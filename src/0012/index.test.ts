@@ -1,11 +1,11 @@
 import { intToRoman } from '.';
 
-test('0012. Integer to Roman', () => {
+describe('0012. Integer to Roman', () => {
   interface TestCase {
     input: {
       num: number;
     };
-    output: string;
+    expected: string;
   }
 
   const testCases: TestCase[] = [
@@ -13,23 +13,24 @@ test('0012. Integer to Roman', () => {
       input: {
         num: 3,
       },
-      output: 'III',
+      expected: 'III',
     },
     {
       input: {
         num: 58,
       },
-      output: 'LVIII',
+      expected: 'LVIII',
     },
     {
       input: {
         num: 1994,
       },
-      output: 'MCMXCIV',
+      expected: 'MCMXCIV',
     },
   ];
 
-  testCases.forEach(({ input, output }) => {
-    expect(intToRoman(input)).toBe(output);
+  test.each(testCases)('Case %#', ({ input: { num }, expected }) => {
+    const result = intToRoman(num);
+    expect(result).toBe(expected);
   });
 });
