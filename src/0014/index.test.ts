@@ -1,24 +1,23 @@
 import { longestCommonPrefix } from '.';
 
-test('0014. Longest Common Prefix', () => {
+describe('0014. Longest Common Prefix', () => {
   interface TestCase {
-    input: string[];
+    input: { strs: string[] };
     output: string;
   }
 
   const testCases: TestCase[] = [
     {
-      input: ['flower', 'flow', 'flight'],
+      input: { strs: ['flower', 'flow', 'flight'] },
       output: 'fl',
     },
     {
-      input: ['dog', 'racecar', 'car'],
+      input: { strs: ['dog', 'racecar', 'car'] },
       output: '',
     },
   ];
 
-  testCases.forEach(({ input, output }) => {
-    const result = longestCommonPrefix(input);
-    expect(result).toEqual(output);
+  test.each(testCases)('%o', ({ input: { strs }, output }) => {
+    expect(longestCommonPrefix(strs)).toBe(output);
   });
 });
