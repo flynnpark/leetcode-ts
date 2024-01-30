@@ -1,6 +1,6 @@
 import { reverseWords } from '.';
 
-test('0151. Reverse Words in a String', () => {
+describe('0151. Reverse Words in a String', () => {
   interface TestCase {
     input: {
       s: string;
@@ -29,7 +29,7 @@ test('0151. Reverse Words in a String', () => {
     },
   ];
 
-  testCases.forEach(({ input: { s }, output }) => {
+  test.each(testCases)('%o', ({ input: { s }, output }) => {
     expect(reverseWords(s)).toEqual(output);
   });
 });
