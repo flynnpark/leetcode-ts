@@ -28,8 +28,8 @@ describe('0028. Find the Index of the First Occurrence in a String', () => {
 
   test.each(testCases)(
     'Case %#',
-    ({ input: { haystack, niddle }, expected }) => {
-      const result = strStr(haystack, niddle);
+    ({ input: { haystack, needle }, expected }) => {
+      const result = strStr(haystack, needle);
       expect(result).toBe(expected);
     },
   );
