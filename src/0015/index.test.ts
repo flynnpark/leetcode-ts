@@ -1,6 +1,6 @@
 import { threeSum } from '.';
 
-test('0015. 3Sum', () => {
+describe('0015. 3Sum', () => {
   interface TestCase {
     input: number[];
     output: number[][];
@@ -24,7 +24,7 @@ test('0015. 3Sum', () => {
     },
   ];
 
-  testCases.forEach(({ input, output }) => {
+  test.each(testCases)('Case %#', ({ input, output }) => {
     const result = threeSum(input);
     expect(result).toEqual(output);
   });
