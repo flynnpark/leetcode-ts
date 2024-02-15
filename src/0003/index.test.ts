@@ -1,31 +1,31 @@
 import { lengthOfLongestSubstring } from '.';
 
-test('0003. Length Substring Without Repeating Characters', () => {
+describe('0003. Length Substring Without Repeating Characters', () => {
   interface TestCase {
-    input: string;
-    output: number;
+    input: { s: string };
+    expected: number;
   }
 
   const testCases: TestCase[] = [
     {
-      input: 'abcabcbb',
-      output: 3,
+      input: { s: 'abcabcbb' },
+      expected: 3,
     },
     {
-      input: 'bbbbb',
-      output: 1,
+      input: { s: 'bbbbb' },
+      expected: 1,
     },
     {
-      input: 'pwwkew',
-      output: 3,
+      input: { s: 'pwwkew' },
+      expected: 3,
     },
     {
-      input: '',
-      output: 0,
+      input: { s: '' },
+      expected: 0,
     },
   ];
 
-  testCases.forEach(({ input, output }) => {
-    expect(lengthOfLongestSubstring(input)).toEqual(output);
+  test.each(testCases)('%o', ({ input: { s }, expected }) => {
+    expect(lengthOfLongestSubstring(s)).toBe(expected);
   });
 });
