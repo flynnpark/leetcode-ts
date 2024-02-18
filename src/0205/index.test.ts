@@ -38,6 +38,13 @@ describe('0205. Isomorphic Strings', () => {
       },
       output: false,
     },
+    {
+      input: {
+        s: 'ab',
+        t: 'aa',
+      },
+      output: false,
+    },
   ];
 
   test.each(testCases)('%o', ({ input, output }) => {

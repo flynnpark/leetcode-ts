@@ -1,18 +1,14 @@
-type Map = {
-  [key: string]: number;
-};
-
 function transform(s: string): string {
-  const map: Map = {};
+  const map = new Map<string, number>();
   const result: number[] = [];
   let index = 0;
   for (const char of s) {
-    if (!Object.keys(map).includes(char)) {
-      map[char] = index;
-      index++;
+    if (!map.has(char)) {
+      map.set(char, index++);
     }
-    result.push(map[char]);
+    result.push(map.get(char)!);
   }
+  console.log(result.join('.'));
   return result.join('.');
 }
 
