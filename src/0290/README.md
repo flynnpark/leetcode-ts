@@ -1,4 +1,4 @@
-# 0290. [Word Pattern]()
+# 0290. [Word Pattern](https://leetcode.com/problems/word-pattern/description/?envType=study-plan-v2&envId=top-interview-150)
 
 Given a `pattern` and a string `s`, find if `s` follows the same pattern.
 
